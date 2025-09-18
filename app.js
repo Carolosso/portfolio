@@ -1,6 +1,12 @@
-var http = require('http');
-var server = http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    //res.end("hello world!\n");
+const next = require('next');
+const http = require('http');
+
+const dev = false; // w produkcji zawsze false
+const app = next({ dev, dir: __dirname });
+const handle = app.getRequestHandler();
+
+app.prepare().then(() => {
+    http.createServer((req, res) => {
+        handle(req, res);
+    }).listen();
 });
-server.listen(3000);
