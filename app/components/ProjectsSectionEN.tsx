@@ -10,6 +10,7 @@ import heartsOMSIPIIblurImage from '../../public/images/heartsOMSIPIIblur.png';
 import pMagazynPebudImage from '../../public/images/pMagazynPebud.png';
 import scpiMonitorImage from '../../public/images/20231212_161841.jpg';
 import PIBiOImage from '../../public/images/PIBiO.png';
+import omsipii1 from '../../public/images/omsipii-1-2.png';
 
 export default function ProjectsSection() {
 	const [modalImage, setModalImage] = useState<string | null>(null);
@@ -48,6 +49,77 @@ export default function ProjectsSection() {
 				{/* Projects List */}
 				{/* First Project eDepozyt Card */}
 				<div className="space-y-16">
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						className="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800"
+					>
+						<div className="p-8">
+							<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+								<div className="space-y-6">
+									<div>
+										<div className='flex gap-4 '>
+
+											<a href='https://play.google.com/store/apps/details?id=com.bulan.omsipii.omsipii&pcampaignid=web_share' target='_blank' className='hover:text-slate-300'>
+												<svg className="w-10 h-10" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+													<path
+														fill="currentColor"
+														d="m3.751.61l13.124 7.546l-2.813 2.813zM1.032 0l12.047 12L1.033 24a1.72 1.72 0 0 1-1.032-1.643v.003V1.641L0 1.576C0 .875.42.272 1.022.005zm19.922 10.594c.414.307.679.795.679 1.344l-.001.065V12a1.56 1.56 0 0 1-.629 1.403l-.004.003l-2.813 1.593L15.14 12l3.047-3.047zM3.751 23.39l10.312-10.359l2.813 2.813z"
+													></path>
+												</svg>
+											</a>
+											<h3 className="text-2xl font-bold mb-4">
+												OMSIPII (testing phase - WIP)
+											</h3>
+										</div>
+										<p className="text-gray-400 text-justify">
+											A mobile application created for the Knights of St. John Paul II to support daily prayer, formation, and community life. With a simple and elegant interface, it provides quick access to prayers, formation materials, and current spiritual content.
+										</p>
+									</div>
+
+									<div className="grid grid-cols-2 gap-6">
+										<div>
+											<h4 className="text-sm font-semibold text-yellow-400 mb-3">Frontend Architecture - <b>Flutter</b></h4>
+											<ul className="space-y-2 text-sm text-gray-400">
+												<li>• Dynamic and responsive user interface for intuitive operation</li>
+												<li>• Simple operation, accessibility</li>
+											</ul>
+										</div>
+										<div>
+											<h4 className="text-sm font-semibold text-purple-400 mb-3">Backend Architecture - <b>Flutter, JSON</b></h4>
+											<ul className="space-y-2 text-sm text-gray-400">
+												<li>• Offline functionality with full access to local data</li>
+												<li>• Data updates from JSON file</li>
+											</ul>
+										</div>
+									</div>
+
+									<div className="space-y-3">
+										<h4 className="text-sm font-semibold text-teal-400">Key features</h4>
+										<ul className="space-y-2 text-sm text-gray-400">
+											<li>• Daily and occasional prayers</li>
+											<li>• Clear search and navigation</li>
+											<li>• Personalization and accessibility</li>
+											<li>• Speed</li>
+										</ul>
+									</div>
+								</div>
+								<div className="relative bg-black/30 rounded-xl p-6">
+									<div className=" aspect-[1] bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+										<Image
+											src={omsipii1}
+											alt="Program eDepozyt Screenshot"
+											fill
+											loading='lazy'
+											className="object-cover w-full h-full cursor-zoom-in rounded-lg"
+											onClick={() => setModalImage(omsipii1.src)}
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</motion.div>
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}

@@ -11,7 +11,6 @@ import pMagazynPebudImage from '../../public/images/pMagazynPebud.png';
 import scpiMonitorImage from '../../public/images/20231212_161841.jpg';
 import PIBiOImage from '../../public/images/PIBiO.png';
 import omsipii1 from '../../public/images/omsipii-1-2.png';
-import omsipii2 from '../../public/images/omsipii-2-2.png';
 
 export default function ProjectsSection() {
 	const [modalImage, setModalImage] = useState<string | null>(null);
